@@ -70,7 +70,6 @@ $monitorxl:"min-width: 2300px";
     letter-spacing: 0.2rem;
     text-align: center;
     background-color:rgba(14, 13, 13, 0.568);
-    
     width:80vw;
     height: 14vh;
     color: white;
@@ -78,16 +77,17 @@ $monitorxl:"min-width: 2300px";
     padding: 0vh 2vw 0vh 2vw;
 
 
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape) //modo landscape celulares
+    @media (max-width:767px) and (orientation: landscape) //modo landscape celulares
     {
-        font-size: 600%;
-        letter-spacing: 0.9rem;
-        position: fixed;
-        right: 1rem;
-        top: 0.5rem;
-        border-bottom-right-radius: 0;
-    }
+      height: 30vh;
+      width: 55vw;
+      position: fixed;
+      right: 2vw;
+      top: 4vh;
+      border-top-left-radius:1rem ;
+      border-top-right-radius:1rem ;
 
+    }
     @media ($tabletxl)
     {
         font-size: 11rem;
@@ -95,6 +95,19 @@ $monitorxl:"min-width: 2300px";
         padding-right: 5vw;
         
     }
+
+    @media ($tabletxl) and (max-width:864px) and (orientation: landscape) //modo landscape celulares xl
+    {
+        font-size: 600%;
+        letter-spacing: 0.9rem;
+        position: fixed;
+        right: 1rem;
+        top: 0rem;
+        margin-top: 1rem;
+        border-bottom-right-radius: 0;
+    }
+
+   
 
     @media ($laptop)
     {
@@ -110,16 +123,7 @@ $monitorxl:"min-width: 2300px";
         
     }
 
-    @media (min-width: 480px) and (max-width:864px) and (orientation: landscape) //modo landscape celulares xl
-    {
-        font-size: 600%;
-        letter-spacing: 0.9rem;
-        position: fixed;
-        right: 1rem;
-        top: 0rem;
-        margin-top: 1rem;
-        border-bottom-right-radius: 0;
-    }
+    
     @media ($monitorxl)
     {
         font-size: 20rem;
@@ -141,12 +145,14 @@ $monitorxl:"min-width: 2300px";
     padding-left: 2vw;
     padding-right: 2vw;
 
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape)
+    @media (max-width:767px) and (orientation: landscape)
     {
         font-size:200% ;
         position: fixed;
-        top: 8.6rem;
-        right: 1rem;
+        top: 34vh;
+        right: 2vw;
+        width: 55vw;
+        padding:2vh 2vw 2vh 2vw;
     }
 
     @media ($tabletxl) 
@@ -156,6 +162,14 @@ $monitorxl:"min-width: 2300px";
         padding-right: 3vw;
         
     }
+    @media ($tabletxl) and (max-width:864px) and (orientation: landscape)
+    {
+        font-size:200% ;
+        position: fixed;
+        top: 8rem;
+        right: 1rem;
+    }
+    
     @media($laptop)
     {
         position: fixed;
@@ -165,20 +179,14 @@ $monitorxl:"min-width: 2300px";
         border-top-right-radius:0;
         padding: 0 1rem 0 1rem;
     }
-    @media (min-width: 480px) and (max-width:864px) and (orientation: landscape)
-    {
-        font-size:200% ;
-        position: fixed;
-        top: 8rem;
-        right: 1rem;
-    }
+
     @media ($monitorxl)
     {
         font-size: 5rem;
         position: fixed;
         top: 25rem;
     }
-
+   
 }
 
 .campo
@@ -200,17 +208,12 @@ $monitorxl:"min-width: 2300px";
     padding-top: 1vh;
 
     
-    @media($tablet)
-    {
-        width:25rem;
-        font-size: 240%;
-    }
 
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape)
+    @media (max-width:767px) and (orientation: landscape)
     {
         position: fixed;
-        top: 11rem;
-        right: 1rem;
+        top: 55vh;
+        right:9vw;
         width:15rem;
         font-size: 150%;
         margin-bottom: 5vh;
@@ -227,18 +230,7 @@ $monitorxl:"min-width: 2300px";
         
     }
 
-    @media($laptop)
-    {
-        width: 50vw;  
-        position: fixed;
-        top: 18rem;
-        right:2.5vw;
-        font-size: 3rem;
-          
-
-    }
-    
-    @media (min-width: 480px) and (max-width:864px) and (orientation: landscape)
+    @media($tabletxl) and (max-width:864px) and (orientation: landscape)
     {
         position: fixed;
         top:50vh;
@@ -247,6 +239,16 @@ $monitorxl:"min-width: 2300px";
         font-size: 8vh; 
     }
 
+    @media($laptop)
+    {
+        width: 50vw;  
+        position: fixed;
+        top: 18rem;
+        right:2.5vw;
+        font-size: 3rem;
+          
+    }
+    
     @media ($monitorxl)
     {
         font-size: 8rem;
@@ -256,31 +258,41 @@ $monitorxl:"min-width: 2300px";
     }
 }
 
+
 nav
 {
     position: absolute;  
     text-align: center;
     top: 60vh;
-    width: 100vw;
+   
+    width: 50vw;
     
  
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape)
+   /* @media (max-width:767px) and (orientation: landscape)
     {
-        top:10vh;
+        top:3vh;
+        width: 30vw;
     }
     @media ($tabletxl)
     {
         top: 85vh;
     }
+
+    @media($tabletxl) and (max-width:864px) and (orientation: landscape)
+    {
+        top:15vh;
+    }
+
     @media($laptop)
     {
         top:80vh;
     }
-    @media (min-width: 480px) and (max-width:864px) and (orientation: landscape)
+    @media ($monitorxl)
     {
-        top:15vh;
+        
     }
     
+   */ 
 }
 
 .fondoNav
@@ -292,6 +304,8 @@ nav
     margin-bottom: 3vh;
     padding: 0 2vw 0 2vw;
     border-radius: 0.5rem;
+    
+    
     
     a
     {
@@ -306,7 +320,7 @@ nav
         font-weight: lighter;
         letter-spacing: 1vw;
     }
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape)
+    @media (max-width:767px) and (orientation: landscape)
     {
         width: 20vw;
         margin-top: 6vh;
@@ -323,15 +337,18 @@ nav
 .lista1
 {
     
-    padding: 0 30% 0 35%;
+    padding: 0 30% 0 30%;
     margin: 0;    
     list-style: none;
     text-align: center;
-    @media (min-width: 480px) and (max-width:767px) and (orientation: landscape)
+  
+
+
+    @media (max-width:767px) and (orientation: landscape)
     {
         display:flex;
         flex-direction: column;
-        padding: 0 5vw 0 3vw;
+     
         
     }
     
