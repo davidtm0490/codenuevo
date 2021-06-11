@@ -1,0 +1,259 @@
+//seccion portfolio mobile first
+
+$tablet: "min-width: 481px";
+$tabletxl: "min-width: 768px";
+$laptop:"min-width: 1024px";
+$monitorxl:"min-width: 2300px";
+
+
+.d-block
+{
+    margin-bottom: 2rem;
+}
+
+#tituloP
+{
+    margin-bottom: 2vh;
+    
+    h1 
+    {
+    text-align: left;
+    margin-left: 5vw;
+    padding-top: 2vh;
+    font-size: 3rem;
+    }
+    
+    @media ($tabletxl) 
+    {   h1 
+        {
+            text-align: center;
+            font-size: 5rem; 
+            margin-left: 0;
+        }
+    }
+    @media (orientation:landscape)
+    {
+        h1 
+        {
+            text-align: center;   
+        }
+    }
+        
+    
+}
+
+#mainPort
+{
+    text-align: center;
+    font-size: 1rem;
+    margin:0;
+    p 
+    {
+        margin: 0;
+    }
+    @media ($tabletxl)
+    {
+       
+        text-align: center;
+        font-size:1.5rem ;   
+        
+    }
+    @media (orientation:landscape)
+    {
+        color: white;  
+        padding-bottom: 2vh;
+    }
+}
+
+
+
+#subtituloPort
+{
+    text-align: center;
+    margin-bottom:0vh;
+    margin-top: 2vh;
+    font-size:2.5rem ;
+    
+    @media ($tabletxl) 
+    {
+        text-align: center;
+        font-size:3.5rem ;
+            
+    }
+    @media (orientation:landscape)
+    {
+        color: white;  
+        padding-bottom: 6vh;
+    }
+   
+}
+
+.carousel-indicators
+{
+    margin-bottom: 2rem;    
+}
+
+//id de imagenes de los carrousels
+#DGuno
+
+{
+    background-image: url(./IMAGENES/portfolio/graphic/diseno1.jpg);
+    background-size:contain;
+    background-position: center;
+    height:65vh;
+    margin-bottom: 3vh;
+    background-repeat: no-repeat;
+    @media($tablet) 
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/disenot1.jpg); 
+    
+    }
+    @media (orientation:landscape)
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/diseno1lc.jpg);
+    }
+    
+   
+}
+
+#DGdos
+{
+    background-image: url(./IMAGENES/portfolio/graphic/diseno2.jpg);
+    background-size:contain;
+    height:65vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/disenot2.jpg); 
+    }
+}
+
+#DGtres
+{
+    background-image: url(./IMAGENES/portfolio/graphic/diseno3.jpg);
+    background-size:contain;
+    background-position: center;
+    height:65vh;
+    background-repeat: no-repeat;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/disenot3.jpg); 
+    }
+}
+
+#DGcuatro
+{
+    background-image: url(./IMAGENES/portfolio/graphic/diseno4.jpg);
+    background-size:contain;
+    height:65vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/disenot4.jpg); 
+    }
+}
+
+#DGcinco
+{
+    background-image: url(./IMAGENES/portfolio/graphic/diseno5.jpg);
+    background-size:contain;
+    height:65vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/graphic/disenot5.jpg); 
+    }
+}
+
+#PWuno
+{
+    background-image: url(./IMAGENES/portfolio/webs/PWUNO.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height:65vh;
+    margin-bottom: 3vh;
+    background-position: center;
+    margin-bottom: 5vh;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/webs/Webt1.jpg); 
+    }
+   
+}
+
+#PWdos
+{
+    background-image: url(./IMAGENES/portfolio/webs/PWDOS.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height:65vh;
+    background-position: center;
+    margin-bottom: 5vh;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/webs/Webt2.jpg); 
+    }
+}
+
+#PWtres
+{
+    background-image: url(./IMAGENES/portfolio/webs/PWTRES.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height:65vh;
+    background-position: center;
+    margin-bottom: 5vh;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/webs/Webt3.jpg); 
+    }
+}
+
+#PWcuatro
+{
+    background-image: url(./IMAGENES/portfolio/webs/PWCUATRO.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height:65vh;
+    background-position: center;
+    margin-bottom: 5vh;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/webs/Webt4.png); 
+    }
+}
+
+#PWcinco
+{
+    background-image: url(./IMAGENES/portfolio/webs/PWCINCO.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height:65vh;
+    background-position: center;
+    margin-bottom: 5vh;
+    @media($tablet)
+    {
+        background-image: url(./IMAGENES/portfolio/webs/Webt5.jpg); 
+    }
+}
+
+#footerPort
+{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.575),rgba(128, 128, 128, 0.514));
+    font-size: 1rem;
+
+    p
+    {
+        padding-top: 1vh;
+    } 
+    
+}
