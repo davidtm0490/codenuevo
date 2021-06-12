@@ -881,6 +881,7 @@ input {
   display: flex;
   background-image: url(./IMAGENES/fondonuevo.png);
   background-size: cover;
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
@@ -889,7 +890,7 @@ input {
 .code {
   font-family: "Tenor Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 550%;
+  font-size: 500%;
   letter-spacing: 0.2rem;
   text-align: center;
   background-color: rgba(14, 13, 13, 0.568);
@@ -910,7 +911,7 @@ input {
     border-top-right-radius: 1rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .code {
     font-size: 11rem;
     padding-left: 5vw;
@@ -919,13 +920,20 @@ input {
 }
 @media (min-width: 768px) and (max-width: 864px) and (orientation: landscape) {
   .code {
-    font-size: 600%;
-    letter-spacing: 0.9rem;
+    height: 30vh;
+    width: 61vw;
     position: fixed;
-    right: 1rem;
-    top: 0rem;
-    margin-top: 1rem;
-    border-bottom-right-radius: 0;
+    right: 2vw;
+    top: 4vh;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 8rem;
+  }
+}
+@media (max-width: 480px) and (min-height: 768px) and (max-height: 824px) and (orientation: portrait) {
+  .code {
+    font-size: 7rem;
+    width: 90vw;
   }
 }
 @media (min-width: 1024px) {
@@ -967,7 +975,7 @@ input {
     padding: 2vh 2vw 2vh 2vw;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .creators {
     font-size: 3rem;
     padding-left: 3vw;
@@ -976,10 +984,18 @@ input {
 }
 @media (min-width: 768px) and (max-width: 864px) and (orientation: landscape) {
   .creators {
-    font-size: 200%;
+    font-size: 300%;
     position: fixed;
-    top: 8rem;
-    right: 1rem;
+    top: 34vh;
+    right: 2vw;
+    width: 61vw;
+    padding: 2vh 2vw 2vh 2vw;
+  }
+}
+@media (max-width: 480px) and (min-height: 768px) and (max-height: 824px) and (orientation: portrait) {
+  .creators {
+    font-size: 2rem;
+    width: 90vw;
   }
 }
 @media (min-width: 1024px) {
@@ -1012,7 +1028,7 @@ input {
   width: -moz-fit-content;
   width: fit-content;
   color: white;
-  margin-top: 15vh;
+  margin-top: 10vh;
   margin-bottom: 1vh;
   padding-left: 3vw;
   padding-right: 3vw;
@@ -1030,7 +1046,7 @@ input {
     margin-top: 3vh;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .campo {
     font-size: 3.5rem;
     width: 50vw;
@@ -1042,10 +1058,19 @@ input {
 @media (min-width: 768px) and (max-width: 864px) and (orientation: landscape) {
   .campo {
     position: fixed;
-    top: 50vh;
-    right: 1rem;
-    width: 19rem;
-    font-size: 8vh;
+    top: 60vh;
+    right: 2vw;
+    width: 59vw;
+    font-size: 150%;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+  }
+}
+@media (max-width: 480px) and (min-height: 768px) and (max-height: 824px) and (orientation: portrait) {
+  .campo {
+    font-size: 1.8rem;
+    padding-top: 2.5vh;
+    padding-bottom: 3vh;
   }
 }
 @media (min-width: 1024px) {
@@ -1069,33 +1094,36 @@ input {
 nav {
   position: absolute;
   text-align: center;
-  top: 60vh;
+  top: 50vh;
   width: 50vw;
-  /* @media (max-width:767px) and (orientation: landscape)
-   {
-       top:3vh;
-       width: 30vw;
-   }
-   @media ($tabletxl)
-   {
-       top: 85vh;
-   }
+  /* @media($laptop)
+    {
+        top:80vh;
+    }
+    @media ($monitorxl)
+    {
 
-   @media($tabletxl) and (max-width:864px) and (orientation: landscape)
-   {
-       top:15vh;
-   }
+    }
 
-   @media($laptop)
-   {
-       top:80vh;
-   }
-   @media ($monitorxl)
-   {
-
-   }
-
-  */
+   */
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  nav {
+    top: 10vh;
+    width: 30vw;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    top: 85vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 864px) and (orientation: landscape) {
+  nav {
+    top: 5vh;
+    left: 0;
+  }
 }
 
 .fondoNav {
@@ -1125,28 +1153,57 @@ nav {
     width: 20vw;
     margin-top: 6vh;
     border-radius: 0.5rem;
+    background-color: rgba(8, 8, 8, 0.815);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .fondoNav {
     border-radius: 1rem;
     width: 80vw;
   }
 }
+@media (min-width: 768px) and (max-width: 864px) and (orientation: landscape) {
+  .fondoNav {
+    width: 20vw;
+    background-color: rgba(8, 8, 8, 0.815);
+  }
+}
 
 .lista1 {
-  padding: 0 30% 0 30%;
+  padding: 0 30% 0 15%;
   margin: 0;
   list-style: none;
   text-align: center;
+  /* @media (max-width:767px) and (orientation: landscape)
+   {
+
+   }*/
+  /* @media ($laptop)
+   {
+       display:flex;
+       flex-direction: row;
+       li
+       {
+           margin-top: 6vh;
+           width: 20vw;
+           border-radius: 0.5rem;
+
+       }
+
+   }
+
+   @media ($monitorxl)
+   {   
+       li{
+           a
+           { 
+           font-size: 4rem;
+           }
+       }
+
+   }*/
 }
-@media (max-width: 767px) and (orientation: landscape) {
-  .lista1 {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .lista1 {
     display: flex;
     flex-direction: row;
@@ -1163,35 +1220,12 @@ nav {
     font-size: 1.7rem;
   }
 }
-@media (min-width: 1024px) {
-  .lista1 {
-    display: flex;
-    flex-direction: row;
-  }
-  .lista1 li {
-    margin-top: 6vh;
-    width: 20vw;
-    border-radius: 0.5rem;
-  }
-}
 @media (min-width: 480px) and (max-width: 864px) and (orientation: landscape) {
   .lista1 {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    padding: 0 5vw 0 10vw;
+    padding-left: 2vw;
   }
   .lista1 li {
-    width: 15vw;
-    margin-top: 7vh;
-  }
-  .lista1 li a {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 2300px) {
-  .lista1 li a {
-    font-size: 4rem;
+    margin-top: 8vh;
   }
 }
 
@@ -1199,7 +1233,7 @@ nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 4vh;
+  height: 4.5vh;
   text-align: center;
   color: white;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.575), rgba(128, 128, 128, 0.514));
@@ -1210,19 +1244,19 @@ nav {
 #fhome p {
   margin-top: 1vh;
   margin-bottom: 1vh;
+  /* @media (min-width: 480px) and (max-width:864px) and (orientation: landscape) //modo landscape celulares xl
+   {
+       font-size: 1.2rem;
+       margin-top: 0.5vh;
+       margin-bottom: 1vh;
+
+   }*/
 }
-@media (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
   #fhome p {
     font-size: 1rem;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
     height: 8vh;
-  }
-}
-@media (min-width: 480px) and (max-width: 864px) and (orientation: landscape) {
-  #fhome p {
-    font-size: 1.2rem;
-    margin-top: 0.5vh;
-    margin-bottom: 1vh;
   }
 }/*# sourceMappingURL=styles.css.map */
